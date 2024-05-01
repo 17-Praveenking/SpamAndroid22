@@ -38,15 +38,15 @@ def transform_text(text):
 tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
 model = pickle.load(open('model.pkl', 'rb'))
 
-main = Flask(__name__)
+app = Flask(__name__)
 
 
-@main.route('/')
+@app.route('/')
 def home():
     return "Hello world"
 
 
-@main.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['POST'])
 def predict():
     input_text = request.form.get('input_text')
 
@@ -65,8 +65,7 @@ def predict():
     # return jsonify(result)
 
 
-if __name__ == '__main__':
-    main.run(debug=True)
+
 
 
 
