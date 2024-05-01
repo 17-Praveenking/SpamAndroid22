@@ -1,4 +1,4 @@
 nltk
 flask
-sklearn
+scikit-learn
 gunicorn
