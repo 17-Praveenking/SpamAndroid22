@@ -63,7 +63,7 @@ def predict():
     if result == 1:
         return jsonify({'SPAM': str(result)})
     else:
-        return jsonify({'HAM': str(result)})
+        return jsonify({'SPAM': str(result)})
 
     # result = {'input_text': input_text}
     # return jsonify(result)
